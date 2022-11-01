@@ -1,0 +1,2 @@
+# tidalab-android
+潮汐实验室Android客户端逆向部分源码，仅供证明违背ClashForAndroid项目GPL开源协议。
