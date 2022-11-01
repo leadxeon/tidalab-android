@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/adapter_provider_0" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/item_min_height" android:paddingStart="@dimen/item_header_margin" android:paddingEnd="0dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/elapsed_view" android:layout_alignParentStart="true">
+        <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_text_margin"/>
+    </LinearLayout>
+    <TextView android:id="@+id/elapsed_view" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/item_midden_margin" android:layout_toStartOf="@+id/end_view"/>
+    <View android:tag="binding_4" android:background="?attr/colorControlHighlight" android:layout_width="@dimen/divider_size" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/end_view"/>
+    <FrameLayout android:id="@+id/end_view" android:tag="binding_5" android:background="?attr/selectableItemBackground" android:nextFocusLeft="@+id/root_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+        <ImageView android:layout_gravity="center" android:id="@+id/update_view" android:tag="binding_6" android:layout_width="@dimen/item_tailing_component_size" android:layout_height="@dimen/item_tailing_component_size" android:layout_margin="@dimen/item_tailing_margin" android:src="@drawable/ic_baseline_swap_vert" android:contentDescription="@string/more"/>
+        <ProgressBar android:layout_gravity="center" android:tag="binding_7" android:layout_width="@dimen/item_tailing_component_size" android:layout_height="@dimen/item_tailing_component_size" android:layout_margin="@dimen/item_tailing_margin"/>
+    </FrameLayout>
+</RelativeLayout>

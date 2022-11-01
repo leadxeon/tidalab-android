@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="211114" android:versionName="4.1.7" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.tidalab.v2board.clash.foss" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <permission android:label="@string/receive_clash_broadcasts" android:name="com.tidalab.v2board.clash.foss.permission.RECEIVE_BROADCASTS" android:protectionLevel="system|signature" android:description="@string/receive_broadcasts_of_clash"/>
+    <uses-permission android:name="com.tidalab.v2board.clash.foss.permission.RECEIVE_BROADCASTS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@style/BootstrapTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.tidalab.v2board.clash.MainApplication" android:allowBackup="true" android:supportsRtl="true" android:fullBackupContent="@xml/full_backup_content" android:usesCleartextTraffic="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data android:name="releaseName" android:value="@string/release_name"/>
+        <meta-data android:name="releaseCode" android:value="@integer/release_code"/>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+        <activity android:label="@string/app_name" android:name="com.tidalab.v2board.clash.MainActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="uiMode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:label="@string/import_from_file" android:name="com.tidalab.v2board.clash.ExternalImportActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="clash" android:host="install-config"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/application_broken" android:name="com.tidalab.v2board.clash.ApkBrokenActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/application_crashed" android:name="com.tidalab.v2board.clash.AppCrashedActivity" android:exported="false" android:launchMode="singleTask" android:configChanges="uiMode"/>
+        <activity android:label="@string/profiles" android:name="com.tidalab.v2board.clash.ProfilesActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/create_profile" android:name="com.tidalab.v2board.clash.NewProfileActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/profile" android:name="com.tidalab.v2board.clash.PropertiesActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/proxy" android:name="com.tidalab.v2board.clash.ProxyActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="Dash" android:name="com.tidalab.v2board.clash.DashActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/providers" android:name="com.tidalab.v2board.clash.ProvidersActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/logs" android:name="com.tidalab.v2board.clash.LogsActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/logcat" android:name="com.tidalab.v2board.clash.LogcatActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/settings" android:name="com.tidalab.v2board.clash.SettingsActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/network" android:name="com.tidalab.v2board.clash.NetworkSettingsActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/app" android:name="com.tidalab.v2board.clash.AppSettingsActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/override" android:name="com.tidalab.v2board.clash.OverrideSettingsActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/access_control_packages" android:name="com.tidalab.v2board.clash.AccessControlActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/help" android:name="com.tidalab.v2board.clash.HelpActivity" android:exported="false" android:configChanges="uiMode"/>
+        <activity android:label="@string/files" android:name="com.tidalab.v2board.clash.FilesActivity" android:exported="false" android:configChanges="uiMode"/>
+        <service android:label="@string/clash_logcat" android:name="com.tidalab.v2board.clash.LogcatService" android:exported="false"/>
+        <service android:label="@string/launch_name" android:icon="@drawable/ic_logo_service" android:name="com.tidalab.v2board.clash.TileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.tidalab.v2board.clash.RestartReceiver" android:enabled="false" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.tidalab.v2board.clash.service.ClashService" android:exported="false" android:process=":background"/>
+        <service android:name="com.tidalab.v2board.clash.service.TunService" android:permission="android.permission.BIND_VPN_SERVICE" android:exported="false" android:process=":background">
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.tidalab.v2board.clash.service.RemoteService" android:exported="false" android:process=":background"/>
+        <service android:name="com.tidalab.v2board.clash.service.ProfileWorker" android:exported="false" android:process=":background"/>
+        <provider android:name="com.tidalab.v2board.clash.service.FilesProvider" android:permission="android.permission.MANAGE_DOCUMENTS" android:exported="true" android:process=":background" android:authorities="com.tidalab.v2board.clash.foss.files" android:grantUriPermissions="true">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:name="com.tidalab.v2board.clash.service.StatusProvider" android:exported="false" android:process=":background" android:authorities="com.tidalab.v2board.clash.foss.status"/>
+        <provider android:name="com.tidalab.v2board.clash.service.PreferenceProvider" android:exported="false" android:process=":background" android:authorities="com.tidalab.v2board.clash.foss.settings"/>
+        <receiver android:name="com.tidalab.v2board.clash.service.ProfileReceiver" android:permission="com.tidalab.v2board.clash.foss.permission.RECEIVE_BROADCASTS" android:enabled="true" android:exported="true" android:process=":background">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="{applicationId}.intent.action.PROFILE_REQUEST_UPDATE"/>
+                <data android:scheme="uuid"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider" android:exported="false" android:authorities="com.tidalab.v2board.clash.foss.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+    </application>
+</manifest>

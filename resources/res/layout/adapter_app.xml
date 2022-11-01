@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/adapter_app_0" android:background="?attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/item_min_height" android:paddingEnd="@dimen/item_tailing_margin">
+    <View android:id="@+id/icon_view" android:tag="binding_1" android:focusable="false" android:clickable="false" android:layout_width="@dimen/item_header_component_size" android:layout_height="@dimen/item_header_component_size" android:layout_marginLeft="@dimen/item_header_margin" android:layout_marginRight="@dimen/item_header_margin" android:layout_centerVertical="true"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/switch_view" android:layout_toEndOf="@+id/icon_view">
+        <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_text_margin"/>
+    </LinearLayout>
+    <com.google.android.material.checkbox.MaterialCheckBox android:gravity="end" android:id="@+id/switch_view" android:tag="binding_4" android:focusable="false" android:clickable="false" android:layout_width="@dimen/item_tailing_component_size" android:layout_height="@dimen/item_tailing_component_size" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

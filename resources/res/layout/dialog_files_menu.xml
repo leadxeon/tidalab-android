@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/dialog_files_menu_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.tidalab.v2board.clash.design.view.LargeActionLabel android:tag="binding_1" android:padding="@dimen/bottom_sheet_menu_items_padding" android:layout_width="match_parent" android:layout_height="match_parent" app:icon="@drawable/ic_baseline_get_app" app:text="@string/import_"/>
+    <com.tidalab.v2board.clash.design.view.LargeActionLabel android:tag="binding_2" android:padding="@dimen/bottom_sheet_menu_items_padding" android:layout_width="match_parent" android:layout_height="match_parent" app:icon="@drawable/ic_baseline_publish" app:text="@string/export"/>
+    <com.tidalab.v2board.clash.design.view.LargeActionLabel android:tag="binding_3" android:padding="@dimen/bottom_sheet_menu_items_padding" android:layout_width="match_parent" android:layout_height="match_parent" app:icon="@drawable/ic_baseline_edit" app:text="@string/rename"/>
+    <com.tidalab.v2board.clash.design.view.LargeActionLabel android:theme="@style/ThemeOverlay.ControlColorError" android:tag="binding_4" android:padding="@dimen/bottom_sheet_menu_items_padding" android:layout_width="match_parent" android:layout_height="match_parent" app:icon="@drawable/ic_outline_delete" app:text="@string/delete"/>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/design_app_crashed_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.tidalab.v2board.clash.design.view.ObservableScrollView android:id="@+id/scroll_root" android:tag="binding_1" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:id="@+id/logs_view" android:paddingLeft="@dimen/logcat_padding_horizontal" android:paddingTop="@dimen/logcat_padding_vertical" android:paddingRight="@dimen/logcat_padding_horizontal" android:paddingBottom="@dimen/logcat_padding_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.5" android:textIsSelectable="true"/>
+    </com.tidalab.v2board.clash.design.view.ObservableScrollView>
+    <com.tidalab.v2board.clash.design.view.ActivityBarLayout android:id="@+id/activity_bar_layout" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/item_tailing_margin">
+        <include layout="@layout/common_activity_bar"/>
+    </com.tidalab.v2board.clash.design.view.ActivityBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

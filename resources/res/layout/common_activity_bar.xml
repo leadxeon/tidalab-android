@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/toolbar_height">
+    <ImageView android:id="@+id/activity_bar_close_view" android:background="?attr/selectableItemBackgroundBorderless" android:paddingLeft="@dimen/toolbar_image_action_padding" android:paddingRight="@dimen/toolbar_image_action_padding" android:focusable="true" android:clickable="true" android:layout_width="@dimen/item_header_component_size" android:layout_height="@dimen/item_header_component_size" android:layout_marginLeft="@dimen/item_header_margin" android:layout_marginRight="@dimen/item_header_margin" android:src="@drawable/ic_baseline_arrow_back" android:contentDescription="@string/close"/>
+    <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" android:ellipsize="end" android:id="@+id/activity_bar_title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+</LinearLayout>

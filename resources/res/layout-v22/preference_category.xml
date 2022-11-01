@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textColor="?attr/colorControlActivated" android:id="@+id/text_view" android:tag="layout/preference_category_0" android:paddingTop="@dimen/item_padding_vertical" android:paddingBottom="@dimen/item_padding_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/item_tailing_margin" android:paddingVertical="@dimen/item_padding_vertical"/>

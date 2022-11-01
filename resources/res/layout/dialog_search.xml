@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/dialog_search_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/item_tailing_margin">
+        <ImageView android:id="@+id/close_view" android:background="?attr/selectableItemBackgroundBorderless" android:padding="@dimen/toolbar_image_action_padding" android:focusable="true" android:clickable="true" android:layout_width="@dimen/item_header_component_size" android:layout_height="@dimen/item_header_component_size" android:layout_margin="@dimen/item_header_margin" android:src="@drawable/ic_baseline_close" android:contentDescription="@string/close"/>
+        <androidx.appcompat.widget.AppCompatEditText android:id="@+id/keyword_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/keyword" android:singleLine="true"/>
+    </LinearLayout>
+    <com.tidalab.v2board.clash.design.view.AppRecyclerView android:id="@+id/main_list" android:paddingBottom="@dimen/dialog_padding" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

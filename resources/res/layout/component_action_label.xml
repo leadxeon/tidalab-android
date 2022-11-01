@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/component_action_label_0" android:background="?attr/selectableItemBackground" android:paddingTop="@dimen/item_padding_vertical" android:paddingBottom="@dimen/item_padding_vertical" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/item_min_height">
+    <View android:id="@+id/icon_view" android:layout_width="@dimen/item_header_component_size" android:layout_height="@dimen/item_header_component_size" android:layout_marginLeft="@dimen/item_header_margin" android:layout_marginRight="@dimen/item_header_margin"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" android:id="@+id/text_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" android:id="@+id/subtext_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_text_margin"/>
+    </LinearLayout>
+</LinearLayout>

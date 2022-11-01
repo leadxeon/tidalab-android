@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/design_files_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/main_list" layout="@layout/common_recycler_list"/>
+    <com.tidalab.v2board.clash.design.view.ActivityBarLayout android:id="@+id/activity_bar_layout" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/item_tailing_margin">
+            <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/new_view" android:layout_alignParentStart="true" layout="@layout/common_activity_bar"/>
+            <ImageView android:layout_gravity="end|center_vertical" android:id="@+id/new_view" android:tag="binding_3" android:background="?attr/selectableItemBackgroundBorderless" android:padding="@dimen/toolbar_image_action_padding" android:focusable="true" android:clickable="true" android:layout_width="@dimen/item_tailing_component_size" android:layout_height="@dimen/item_tailing_component_size" android:src="@drawable/ic_baseline_add" android:layout_centerVertical="true" android:contentDescription="@string/_new" android:layout_marginStart="@dimen/item_tailing_margin" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </com.tidalab.v2board.clash.design.view.ActivityBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

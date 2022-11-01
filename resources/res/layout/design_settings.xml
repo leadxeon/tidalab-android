@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/design_settings_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.tidalab.v2board.clash.design.view.ObservableScrollView android:id="@+id/scroll_root" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.tidalab.v2board.clash.design.view.ActionLabel android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" app:icon="@drawable/ic_baseline_settings" app:text="@string/app"/>
+            <com.tidalab.v2board.clash.design.view.ActionLabel android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" app:icon="@drawable/ic_baseline_dns" app:text="@string/network"/>
+            <com.tidalab.v2board.clash.design.view.ActionLabel android:tag="binding_4" android:layout_width="match_parent" android:layout_height="wrap_content" app:icon="@drawable/ic_baseline_extension" app:text="@string/override"/>
+        </LinearLayout>
+    </com.tidalab.v2board.clash.design.view.ObservableScrollView>
+    <com.tidalab.v2board.clash.design.view.ActivityBarLayout android:id="@+id/activity_bar_layout" android:tag="binding_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/item_tailing_margin">
+        <include layout="@layout/common_activity_bar"/>
+    </com.tidalab.v2board.clash.design.view.ActivityBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

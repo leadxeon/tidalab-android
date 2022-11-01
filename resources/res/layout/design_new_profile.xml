@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/design_new_profile_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/main_list" layout="@layout/common_recycler_list"/>
+    <com.tidalab.v2board.clash.design.view.ActivityBarLayout android:id="@+id/activity_bar_layout" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/item_tailing_margin">
+        <include layout="@layout/common_activity_bar"/>
+    </com.tidalab.v2board.clash.design.view.ActivityBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

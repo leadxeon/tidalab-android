@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/design_about_0" android:padding="@dimen/dialog_padding" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:background="@drawable/ic_clash" android:layout_width="@dimen/about_icon_size" android:layout_height="@dimen/about_icon_size" android:backgroundTint="?attr/colorLogo"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/about_text_margin">
+        <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/application_name"/>
+        <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_text_margin"/>
+    </LinearLayout>
+</LinearLayout>
